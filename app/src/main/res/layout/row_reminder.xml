@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_10dp"
+    android:layout_marginRight="@dimen/space_10dp"
+    android:layout_marginBottom="@dimen/space_4dp"
+    android:layout_marginTop="@dimen/space_4dp"
+    android:background="@color/colorTheme"
+    app:cardElevation="@dimen/space_2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:background="@color/colorTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_12dp">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05:00"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_20" />
+
+        <TextView
+            android:id="@+id/txtRepeatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTime"
+            android:layout_marginTop="@dimen/space_16dp"
+            android:text="Repeat"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/txtRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRepeatTitle"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/space_8dp"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/colorGray" />
+
+        <Switch
+            android:id="@+id/swtReminderOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/space_4dp"
+            android:outlineSpotShadowColor="@color/colorGray"
+            android:thumbTint="@color/colorButton"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:layout_marginEnd="@dimen/space_4dp"
+            android:layout_marginBottom="@dimen/space_4dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

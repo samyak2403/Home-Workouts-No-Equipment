@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llMain"
+    android:fitsSystemWindows="false"
+    android:background="@color/colorWhite"
+    tools:context="com.rbs.workout.freak.activity.GetStartActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBackImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/get_started" />
+
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/logo_getsrarted"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/txtTextLine"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:src="@mipmap/ic_launcher_round" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTextLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnGetStarted"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/ready_to_take_on_the_challenge"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rounded_white"
+        android:fontFamily="@font/bebas"
+        android:padding="16dp"
+        android:text="@string/get_started"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+</RelativeLayout>

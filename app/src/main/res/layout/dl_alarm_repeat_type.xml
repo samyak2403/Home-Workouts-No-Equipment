@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRepeat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10dp">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkMon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorTheme"
+        android:layout_margin="@dimen/space_4dp"
+        android:checked="true"
+        android:textColor="@color/colorTheme"
+        android:padding="@dimen/space_4dp"
+        android:text="@string/hint_monday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkTue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:textColor="@color/colorTheme"
+        android:checked="true"
+        android:buttonTint="@color/colorTheme"
+        android:padding="@dimen/space_4dp"
+        android:text="@string/hint_tuesday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkWed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:checked="true"
+        android:buttonTint="@color/colorTheme"
+        android:textColor="@color/colorTheme"
+        android:padding="@dimen/space_4dp"
+        android:text="@string/hint_wednesday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:checked="true"
+        android:buttonTint="@color/colorTheme"
+        android:padding="@dimen/space_4dp"
+        android:textColor="@color/colorTheme"
+        android:text="@string/hint_thursday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkFri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:checked="true"
+        android:textColor="@color/colorTheme"
+        android:padding="@dimen/space_4dp"
+        android:buttonTint="@color/colorTheme"
+        android:text="@string/hint_friday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkSat"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorTheme"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:buttonTint="@color/colorTheme"
+        android:checked="true"
+        android:padding="@dimen/space_4dp"
+        android:text="@string/hint_saturday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_4dp"
+        android:buttonTint="@color/colorTheme"
+        android:checked="true"
+        android:padding="@dimen/space_4dp"
+        android:textColor="@color/colorTheme"
+        android:text="@string/hint_sunday" />
+
+</LinearLayout>

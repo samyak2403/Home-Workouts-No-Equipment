@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_set_week_goal"
+    android:orientation="vertical"
+    tools:context=".activity.WeeklyGoalSetActivity">
+
+    <!-- Todo Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space_16dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <!-- Todo Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:text="@string/set_your_weekly_goal"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:text="@string/we_recommend_training_at_least_3_days_weekly_for_a_better_result"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32dp"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:text="@string/weekly_training_days_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_18" />
+
+            <EditText
+                android:id="@+id/edWeekDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_setting_sec_arrow"
+                android:drawableTint="@color/colorWhite"
+                android:focusable="false"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32dp"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:text="First Day Of week"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_18" />
+
+            <EditText
+                android:id="@+id/edFirstDayOfWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_setting_sec_arrow"
+                android:drawableTint="@color/colorWhite"
+                android:focusable="false"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/round_corner_theme"
+            android:text="@string/btn_save"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

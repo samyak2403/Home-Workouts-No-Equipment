@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activity.WorkoutListDetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgbtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_8dp"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:padding="@dimen/space_8dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorTheme" />
+
+            <ImageView
+                android:id="@+id/imgbtnVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/space_8dp"
+                android:src="@drawable/ic_video_white" />
+
+        </RelativeLayout>
+        <!--<android.support.v4.view.ViewPager-->
+        <com.rbs.workout.freak.utils.NonSwipeAbleViewPager
+            android:id="@+id/viewPagerWorkoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/rltBottomControl"
+            android:layout_below="@+id/imgbtnVideo"
+            android:layout_marginTop="@dimen/space_2dp"
+            android:layout_marginBottom="@dimen/space_2dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:id="@+id/rltBottomControl"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/imgbtnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_pre" />
+
+            <TextView
+                android:id="@+id/imgbtnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bebas"
+                android:gravity="center"
+                android:text="@string/step_demo_text"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/imgbtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/adMobView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

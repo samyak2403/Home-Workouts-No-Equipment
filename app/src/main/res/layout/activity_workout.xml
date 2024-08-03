@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.WorkoutActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyWorkoutStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!-- Exercise animation view with sliding -->
+    <com.rbs.workout.freak.utils.NonSwipeAbleViewPager
+        android:id="@+id/viewPagerWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rltBottomControl"
+        android:layout_below="@+id/rltTop" />
+
+    <!-- Top controls -->
+    <!--<RelativeLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rcyWorkoutStatus">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:padding="@dimen/rlt_top_btn_padding"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/rlt_top_btn_left_right_margin"
+            android:padding="@dimen/space_6dp"
+            android:text="00:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        &lt;!&ndash; Ready to go top control&ndash;&gt;
+        <LinearLayout
+            android:id="@+id/llReadyToGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtReadyToGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rlt_top_btn_left_right_margin"
+                android:padding="@dimen/space_6dp"
+                android:text="@string/ready_to_go"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workout Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/rlt_top_btn_left_right_margin"
+            android:src="@drawable/ic_video_white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgVideo"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/rlt_top_btn_left_right_margin"
+            android:src="@drawable/ic_info" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgInfo"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/rlt_top_btn_left_right_margin"
+            android:src="@drawable/ic_sound_on" />
+
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rcyWorkoutStatus"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="15dp"
+            android:padding="@dimen/space_4dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:padding="@dimen/space_6dp"
+            tools:text="00:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_22"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <!-- Ready to go top control-->
+        <LinearLayout
+            android:id="@+id/llReadyToGo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtReadyToGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rlt_top_btn_left_right_margin"
+                android:padding="@dimen/space_6dp"
+                android:text="@string/ready_to_go"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workout Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/space_10dp"
+            android:orientation="vertical">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4dp"
+            android:src="@drawable/ic_video_white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4dp"
+            android:src="@drawable/ic_info" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4dp"
+            android:src="@drawable/ic_sound_on" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom controls -->
+    <RelativeLayout
+        android:id="@+id/rltBottomControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <!-- Next, pre and done button-->
+        <RelativeLayout
+            android:id="@+id/rltStepTypeWorkOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_4dp"
+            android:layout_marginBottom="@dimen/space_4dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgbtnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_pre" />
+
+            <TextView
+                android:id="@+id/imgbtnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_done"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgbtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+        <!-- Timer rbs controls -->
+        <RelativeLayout
+            android:id="@+id/rltTimeTypeWorkOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyBottomWorkoutTimeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtTimeCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bebas"
+                android:text="@string/demo_time"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_28" />
+
+            <ImageButton
+                android:id="@+id/imgbtnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_puase" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Ready to go bottom controls -->
+    <RelativeLayout
+        android:id="@+id/rltBottomReadyToGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/space_32dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rltCountDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/txtCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/bebas"
+                android:gravity="center"
+                tools:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/progress_text_size" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layoutDirection="rtl"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/progress_bar"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltCountDown"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Skip"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/text_size_18" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

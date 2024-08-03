@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/annonce.main.coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- Header view -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/flexible.example.appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/flexible.example.collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:contentScrim="?colorPrimary"
+                app:expandedTitleGravity="center"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="@string/app_name"
+                app:titleEnabled="false">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/build_wider" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@null"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_back" />
+
+                <LinearLayout
+                    android:id="@+id/llText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="none">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_build_wild_star_round" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        android:fontFamily="@font/bebas"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/space_8dp"
+                        android:text="@string/build_wider_title"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <!-- Content view -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <!-- app:behavior_overlapTop="100dp" -->
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:layout_marginEnd="@dimen/space_8dp"
+                android:layout_marginBottom="@dimen/space_8dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fl_native"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </FrameLayout>
+
+
+                <!-- Introduction title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_marginEnd="@dimen/space_4dp"
+                    android:drawableStart="@drawable/ic_exe_list_line"
+                    android:drawablePadding="@dimen/space_8dp"
+                    android:paddingStart="@dimen/space_4dp"
+                    android:paddingTop="@dimen/space_8dp"
+                    android:paddingEnd="@dimen/space_4dp"
+                    android:paddingBottom="@dimen/space_8dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/build_wider_introduction"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold" />
+
+                <!-- Introduction text -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:id="@+id/tvData1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_4dp"
+                        android:layout_marginEnd="@dimen/space_4dp"
+                        android:lineSpacingExtra="@dimen/space_8dp"
+                        android:padding="@dimen/space_4dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/build_wider_text_1"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tvData2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvData1"
+                        android:layout_marginStart="@dimen/space_4dp"
+                        android:layout_marginEnd="@dimen/space_4dp"
+                        android:layout_marginBottom="@dimen/space_8dp"
+                        android:lineSpacingExtra="@dimen/space_8dp"
+                        android:padding="@dimen/space_4dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/build_wider_text_2"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivMask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvData2"
+                        android:padding="@dimen/space_12dp"
+                        android:src="@drawable/ic_build_arrow_down"
+                        app:tint="@color/colorGray" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_4dp"
+                    android:background="@color/colorGray"
+                    android:visibility="gone" />
+
+                <!-- Level Images -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8dp"
+                    android:layout_marginBottom="@dimen/text_size_20"
+                    android:orientation="vertical">
+
+                    <!-- Build wider beginner -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvBeginner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_workout_row_img_height"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/card_view_radius"
+                        app:cardElevation="@dimen/elevation_view">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/build_wider_beginner" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgTopBeginner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:src="@drawable/ic_build_wild_star"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderBeginnerTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgTopBeginner"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:layout_marginTop="@dimen/space_16dp"
+                                android:fontFamily="@font/bebas"
+                                android:text="@string/beginner"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/home_workout_row_title_text" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderBeginnerDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderBeginnerTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:drawableStart="@drawable/ic_build_wild_level_clock"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="14 mins"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderBeginnerTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderBeginnerTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:layout_toEndOf="@+id/txtBuildWiderBeginnerDetails"
+                                android:drawableStart="@drawable/ic_build_wild_level_workout"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="15 workouts"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderBeginnerGo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="@dimen/space_16dp"
+                                android:layout_marginBottom="@dimen/space_8dp"
+                                android:background="@drawable/button_rounded_white"
+                                android:paddingStart="@dimen/space_32dp"
+                                android:paddingTop="@dimen/space_12dp"
+                                android:paddingEnd="@dimen/space_32dp"
+                                android:textColor="@color/colorTheme"
+                                android:paddingBottom="@dimen/space_16dp"
+                                android:text="@string/build_wider_go_btn"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Build wider Intermediate -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvIntermediate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_workout_row_img_height"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/card_view_radius"
+                        app:cardElevation="@dimen/elevation_view">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/build_wider_intermidiate" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgTopIntermediate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:src="@drawable/ic_build_wild_star"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderIntermediateTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgTopIntermediate"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:layout_marginTop="@dimen/space_16dp"
+                                android:fontFamily="@font/bebas"
+                                android:text="@string/intermediate"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/home_workout_row_title_text" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderIntermediateDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderIntermediateTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:drawableStart="@drawable/ic_build_wild_level_clock"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="18 mins"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderIntermediateWorkout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderIntermediateTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:layout_toEndOf="@+id/txtBuildWiderIntermediateDetails"
+                                android:drawableStart="@drawable/ic_build_wild_level_workout"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="20 Workouts"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderIntermediateGo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="@dimen/space_16dp"
+                                android:layout_marginBottom="@dimen/space_8dp"
+                                android:background="@drawable/button_rounded_white"
+                                android:paddingStart="@dimen/space_32dp"
+                                android:paddingTop="@dimen/space_12dp"
+                                android:paddingEnd="@dimen/space_32dp"
+                                android:textColor="@color/colorTheme"
+                                android:paddingBottom="@dimen/space_16dp"
+                                android:text="@string/build_wider_go_btn"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Build wider Advanced -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAdvanced"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_workout_row_img_height"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/card_view_radius"
+                        app:cardElevation="@dimen/elevation_view">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/build_wider_advance" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgTopAdvanced"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:src="@drawable/ic_build_wild_star"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderAdvancedTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgTopAdvanced"
+                                android:layout_marginStart="@dimen/space_16dp"
+                                android:layout_marginTop="@dimen/space_16dp"
+                                android:fontFamily="@font/bebas"
+                                android:text="@string/advanced"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/home_workout_row_title_text" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderAdvancedDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderAdvancedTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:drawableStart="@drawable/ic_build_wild_level_clock"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="26 mins"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderAdvancedWorkout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtBuildWiderAdvancedTitle"
+                                android:layout_alignParentBottom="false"
+                                android:layout_marginStart="@dimen/space_8dp"
+                                android:layout_marginBottom="@dimen/main_margin_bottom"
+                                android:layout_toEndOf="@+id/txtBuildWiderAdvancedDetails"
+                                android:drawableStart="@drawable/ic_build_wild_level_workout"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:padding="@dimen/workout_row_padding_two"
+                                android:text="26 Workouts"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/txtBuildWiderAdvancedGo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="@dimen/space_16dp"
+                                android:layout_marginBottom="@dimen/space_8dp"
+                                android:background="@drawable/button_rounded_white"
+                                android:paddingStart="@dimen/space_32dp"
+                                android:textColor="@color/colorTheme"
+                                android:paddingTop="@dimen/space_12dp"
+                                android:paddingEnd="@dimen/space_32dp"
+                                android:paddingBottom="@dimen/space_16dp"
+                                android:text="@string/build_wider_go_btn"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</LinearLayout>

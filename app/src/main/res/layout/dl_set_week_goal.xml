@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/npWeeklyDayGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@color/colorButton"
+            app:np_height="180dp"
+            app:np_max="7"
+            app:np_min="0"
+            app:np_selectedTextColor="@color/colorWhite"
+            app:np_selectedTextSize="@dimen/text_size_22"
+            app:np_textColor="@color/colorWhite"
+            app:np_textSize="@dimen/text_size_16"
+            app:np_value="3"
+            app:np_width="64dp"
+            app:np_wrapSelectorWheel="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_16dp"
+            android:layout_toEndOf="@+id/npWeeklyDayGoal"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Days"
+            android:textSize="@dimen/text_size_20" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnOkay"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_ok"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</LinearLayout>

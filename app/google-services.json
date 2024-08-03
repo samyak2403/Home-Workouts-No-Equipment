@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125669350477",
+    "project_id": "workout-freak-d99d7",
+    "storage_bucket": "workout-freak-d99d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125669350477:android:e75544edbcdfda7ba69004",
+        "android_client_info": {
+          "package_name": "com.rbs.workout.freak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125669350477-nk4vqsi19ebcs2cm261kaii8oarehu95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4GmotUA75Hod8DuQrJv8WvBouT_umzRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125669350477-nk4vqsi19ebcs2cm261kaii8oarehu95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

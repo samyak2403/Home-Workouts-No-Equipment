@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    tools:context="com.rbs.workout.freak.activity.WorkoutListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rltToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/workout_list_title_height"
+            android:background="@color/color_toolbar_bg">
+
+            <ImageView
+                android:id="@+id/imgToolbarBack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/workout_list_title_height"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray"
+                android:visibility="gone" />
+
+
+
+            <ImageView
+                android:id="@+id/imgWorkOutListBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/text_size_26"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/toolbar_img_padding"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/txtWorkoutListCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="35dp"
+                android:layout_toEndOf="@+id/imgWorkOutListBack"
+                android:text="@string/demo_text"
+                android:textAllCaps="true"
+                android:textColor="@color/color_toolbar_text"
+                android:textSize="@dimen/toolbar_title_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutListCategoryDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWorkoutListCategoryName"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imgWorkOutListBack"
+                android:text="@string/demo_text"
+                android:textColor="@color/color_toolbar_text"
+                android:textSize="@dimen/workout_list_details_txt"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgWorkoutDificultyImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWorkoutListCategoryDetails"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imgWorkOutListBack"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_beginner_level" />
+
+            <!-- Todo Workout count -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/space_32dp"
+                android:layout_marginBottom="@dimen/space_8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvWorkoutTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bebas"
+                    android:text="11"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_semibold"
+                    android:text="@string/workouts"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ad_block_workoutlist"
+            style="@style/drawer_card2"
+            android:elevation="2dp"
+            android:background="@color/colorTheme"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fl_native"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTheme"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+        <!-- Todo Workout list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyWorkoutList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/btnStartWorkout"
+            android:layout_below="@+id/rltToolbar"
+            android:layout_weight="1"
+            android:background="@color/colorTheme"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/btnStartWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:text="@string/start_workout"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/font_eighteen"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/llAdView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_50dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@color/colorTheme"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/llAdViewFacebook"-->
+<!--        android:background="@color/colorTheme"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_50dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="gone" />-->
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_workout_row_img_height">160dp</dimen>
+    <dimen name="home_workout_row_lib_img_height">110dp</dimen>
+    <dimen name="workout_list_title_height">160dp</dimen>
+</resources>

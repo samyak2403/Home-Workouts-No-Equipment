@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:orientation="vertical"
+    tools:context=".activity.CompletedActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Complete congratulation image and exercise contents -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTheme">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/rlt_top_btn_left_right_margin"
+                    android:padding="@dimen/rlt_top_btn_padding"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/colorWhite" />
+
+                <!-- Congratulation view -->
+                <RelativeLayout
+                    android:id="@+id/rltImgLevel"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgCompleteLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_completed" />
+
+                </RelativeLayout>
+
+                <!-- Day completed -->
+                <TextView
+                    android:id="@+id/txtLevelNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltImgLevel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/complete_lvl_done_msg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+
+                <!-- Total Exercise view -->
+                <LinearLayout
+                    android:id="@+id/llExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLevelNo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTotalNoOfLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="8"
+                        android:fontFamily="@font/oswald_bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <TextView
+                        android:id="@+id/txtExercise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Exercise"
+                        android:fontFamily="@font/oswald_bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Burned calories view -->
+                <LinearLayout
+                    android:id="@+id/llBurnCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLevelNo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtBurnCaloriesValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0.0"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/oswald_bold"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <TextView
+                        android:id="@+id/txtBurnCaloriesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="kcal"
+                        android:fontFamily="@font/oswald_bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Durations view -->
+                <LinearLayout
+                    android:id="@+id/llDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLevelNo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDurationTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="00:50"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <TextView
+                        android:id="@+id/txtDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Duration"
+                        android:fontFamily="@font/oswald_bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Bottom Reminder, next, Share view -->
+                <!--<RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llDuration"
+                    android:layout_marginStart="@dimen/main_margin_left"
+                    android:layout_marginTop="@dimen/main_margin_top"
+                    android:layout_marginEnd="@dimen/main_margin_right"
+                    android:layout_marginBottom="@dimen/main_margin_bottom">
+
+                    <Button
+                        android:id="@+id/btnDoItAgain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:text="Do It Again"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/main_margin_right"
+                        android:layout_toStartOf="@+id/btnShare"
+                        android:background="@android:color/transparent"
+                        android:text="Next"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <Button
+                        android:id="@+id/btnShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:text="Share"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_18" />
+
+                </RelativeLayout>-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llDuration"
+                    android:layout_marginStart="@dimen/space_8dp"
+                    android:layout_marginTop="@dimen/space_32dp"
+                    android:layout_marginEnd="@dimen/space_8dp"
+                    android:layout_marginBottom="@dimen/space_8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnDoItAgain"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/btn_do_it_again"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_dp40"
+                        android:layout_toStartOf="@+id/btnShare"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/btn_next"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <Button
+                        android:id="@+id/btnShare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/space_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/btn_share"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- current Weekday status -->
+            <LinearLayout
+                android:id="@+id/llWeekStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:layout_marginEnd="@dimen/space_8dp"
+                android:background="@color/colorTheme"
+                android:elevation="@dimen/elevation_view"
+                android:orientation="vertical"
+                android:padding="@dimen/space_8dp">
+
+                <!-- Day Status Title -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_8dp">
+
+                    <TextView
+                        android:id="@+id/tvWeekName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="week 1 - Day 1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvGoalStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/space_8dp"
+                        android:text="1/7"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcyWeekStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+            <!-- Weight and bmi graph view -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin_left"
+                android:layout_marginTop="@dimen/main_margin"
+                android:layout_marginEnd="@dimen/main_margin_right"
+                android:background="@color/colorTheme"
+                android:elevation="@dimen/elevation_view"
+                android:orientation="vertical"
+                android:padding="@dimen/space_8dp">
+
+                <!-- Weight view -->
+                <TextView
+                    android:id="@+id/txtWeightTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_margin_top"
+                    android:text="Weight"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/main_margin_right"
+                        android:layout_toStartOf="@+id/txtKG"
+                        android:hint="KG"
+                        android:textColorHint="@color/colorGray"
+                        android:textColor="@color/colorWhite"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/txtKG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/main_margin_right"
+                        android:layout_toStartOf="@+id/txtLB"
+                        android:background="@drawable/ract_theme_select"
+                        android:padding="@dimen/space_8dp"
+                        android:text="KG"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/main_margin_right"
+                        android:background="@drawable/ract_gray"
+                        android:padding="@dimen/space_8dp"
+                        android:text="LB"
+                        android:textColor="@color/colorTheme"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <!-- Bmi title and hide button -->
+                <TextView
+                    android:id="@+id/txtBmiTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_margin_top_double"
+                    android:text="@string/bmi_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtHideShowBmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/space_12dp"
+                    android:text="Hide"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <!-- Graph view-->
+                <LinearLayout
+                    android:id="@+id/lnyBmiGraphMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!-- Bmi Color view -->
+                        <LinearLayout
+                            android:id="@+id/lnyBmiGraph"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/main_margin_top"
+                            android:background="@color/colorTheme"
+                            android:orientation="horizontal"
+                            android:weightSum="7">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                                android:layout_weight="0.5"
+                                android:background="@color/colorFirst" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorSecond" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                                android:layout_weight="2"
+                                android:background="@color/colorThird" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                                android:layout_weight="1"
+                                android:background="@color/colorFour" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                                android:layout_weight="1"
+                                android:background="@color/colorFive" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/colorSix" />
+
+                        </LinearLayout>
+
+                        <!-- Bmi Blank view and display bmi percentage -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:weightSum="7">
+
+                            <View
+                                android:id="@+id/blankView1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1">
+
+                                <TextView
+                                    android:id="@+id/txtBmiGrade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:id="@+id/BmiPosition"
+                                    android:layout_width="5dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/txtBmiGrade"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorWhite" />
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/blankView3"
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.0"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!-- Bmi bottom text -->
+                    <LinearLayout
+                        android:id="@+id/lnyBmiNumberGraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTheme"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="0.4"
+                            android:text="15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="1.3"
+                            android:text="16"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="2.1"
+                            android:text="18.5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="1.1"
+                            android:text="25"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="1"
+                            android:text="30"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="0.80"
+                            android:text="35"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/bmi_graph_center_spacing"
+                            android:layout_weight="0.35"
+                            android:text="40"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_12" />
+
+                    </LinearLayout>
+
+                    <!-- Bmi Calculation text -->
+                    <TextView
+                        android:id="@+id/txtWeightString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/main_margin_top"
+                        android:text="Bmi Calculation text"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <Button
+                        android:id="@+id/btnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/main_margin_top"
+                        android:background="@android:color/transparent"
+                        android:text="Edit"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- I feel view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin_left"
+                android:layout_marginTop="@dimen/main_margin"
+                android:layout_marginEnd="@dimen/main_margin_right"
+                android:background="@color/colorTheme"
+                android:elevation="@dimen/elevation_view"
+                android:orientation="vertical"
+                android:padding="@dimen/space_8dp">
+
+                <TextView
+                    android:id="@+id/txtFeelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I feel"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/space_4dp">
+
+                    <TextView
+                        android:id="@+id/txtEasyTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:id="@+id/txtExhaustedTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Exhausted"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/colorTheme"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/rdgFeel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:buttonTint="@color/colorButton"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdoFeelOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorButton"
+                            android:padding="@dimen/space_8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoFeelTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorButton"
+                            android:padding="@dimen/space_8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoFeelThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorButton"
+                            android:padding="@dimen/space_8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoFeelFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorButton"
+                            android:padding="@dimen/space_8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rdoFeelFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorButton"
+                            android:padding="@dimen/space_8dp" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnFeedBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/main_margin_top"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/space_4dp"
+                    android:text="Feedback"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <!-- Save Button-->
+            <Button
+                android:id="@+id/btnSaveBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin_left"
+                android:layout_marginTop="@dimen/main_margin_top"
+                android:layout_marginEnd="@dimen/main_margin_right"
+                android:layout_marginBottom="@dimen/main_margin_bottom"
+                android:background="@color/colorWhite"
+                android:text="Next"
+                android:textColor="@color/colorTheme"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- AdView Code -->
+            <LinearLayout
+                android:id="@+id/lny_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                android:background="@color/colorTheme"
+                android:orientation="vertical">
+
+                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/main_margin_bottom"
+                    android:visibility="gone"
+                    ads:adSize="MEDIUM_RECTANGLE"
+                     />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_gravity="center"
+        android:background="@color/colorTheme"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/colorTheme"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

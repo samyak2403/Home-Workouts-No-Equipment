@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:id="@+id/llMain"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    tools:context=".bw.BuildWiderWorkoutListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/annonce.main.coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnStartWorkout">
+
+            <!-- Todo Header view -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/flexible.example.appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/flexible.example.collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    app:contentScrim="@color/colorTheme"
+                    app:expandedTitleGravity="center"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:title="@string/app_name"
+                    app:titleEnabled="false">
+
+                    <ImageView
+                        android:id="@+id/ivCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/build_wider" />
+
+                    <RelativeLayout
+                        android:id="@+id/llOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_4dp"
+                        app:layout_collapseMode="none">
+
+                        <TextView
+                            android:id="@+id/txtBWTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_0dp"
+                            android:drawableStart="@drawable/ic_build_wild_level_clock"
+                            android:fontFamily="@font/sf_pro_display_semibold"
+                            android:padding="@dimen/workout_row_padding_two"
+                            android:text="14 mins"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <TextView
+                            android:id="@+id/txtBWWorkout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8dp"
+                            android:layout_toEndOf="@+id/txtBWTime"
+                            android:drawableStart="@drawable/ic_build_wild_level_workout"
+                            android:fontFamily="@font/sf_pro_display_semibold"
+                            android:padding="@dimen/workout_row_padding_two"
+                            android:text="15 workouts"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_16" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/space_20dp"
+                        app:layout_collapseMode="pin"
+                        app:navigationIcon="@drawable/ic_back" />
+
+                    <LinearLayout
+                        android:id="@+id/llText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="none">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_build_wild_star_round" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/space_8dp"
+                            android:fontFamily="@font/bebas"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/space_8dp"
+                            android:text="@string/build_wider_title"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/tvDifficulty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/bebas"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/space_8dp"
+                            android:text="@string/beginner"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!-- Todo Content -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space_4dp">
+
+                    <!-- Todo Introduction title -->
+
+                    <!-- Todo Introduction text -->
+
+                    <FrameLayout
+                        android:id="@+id/fl_native"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginEnd="@dimen/space_8dp"
+                        android:drawablePadding="@dimen/space_8dp"
+                        android:padding="@dimen/space_8dp"
+                        android:text="@string/build_wider_introduction"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_exe_list_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginEnd="@dimen/space_8dp">
+
+                        <TextView
+                            android:id="@+id/tvData1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_4dp"
+                            android:layout_marginEnd="@dimen/space_4dp"
+                            android:lineSpacingExtra="@dimen/space_8dp"
+                            android:padding="@dimen/space_4dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="@string/build_wider_beginner_text_1"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvData2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvData1"
+                            android:layout_marginStart="@dimen/space_4dp"
+                            android:layout_marginEnd="@dimen/space_4dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginBottom="@dimen/space_8dp"
+                            android:lineSpacingExtra="@dimen/space_8dp"
+                            android:padding="@dimen/space_4dp"
+                            android:text="@string/build_wider_beginner_text_2"
+                            android:textSize="@dimen/text_size_14"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivMask"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvData2"
+                            android:padding="@dimen/space_12dp"
+                            android:src="@drawable/ic_build_arrow_down"
+                            app:tint="@color/colorGray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_0dp"
+                        android:layout_marginTop="@dimen/space_4dp"
+                        android:layout_marginEnd="@dimen/space_0dp"
+                        android:background="@color/colorTheme"
+                        android:drawableStart="@drawable/ic_exe_list_line"
+                        android:drawablePadding="@dimen/space_8dp"
+                        android:padding="@dimen/space_16dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/build_wider_exercise_list"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyWorkoutList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginEnd="@dimen/space_8dp"
+                        android:background="@color/colorTheme"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStartWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/start_workout"
+            android:textColor="@color/colorTheme"
+            android:background="@color/colorWhite"
+            android:textSize="@dimen/font_eighteen"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

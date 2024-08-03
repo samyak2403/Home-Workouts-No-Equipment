@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <!--<clip>-->
+            <!--<scale android:scaleWidth="100%">-->
+                <shape android:shape="rectangle">
+
+                    <solid android:color="@color/colorWhite" />
+
+                   <!-- <gradient
+                        android:angle="0"
+                        android:centerColor="@color/colorGray"
+                        android:centerY="0"
+                        android:endColor="@color/colorGray"
+                        android:startColor="@color/colorGray" />-->
+                    <corners
+                        android:bottomLeftRadius="@dimen/space_10dp"
+                        android:bottomRightRadius="@dimen/space_10dp"
+                        android:topLeftRadius="@dimen/space_10dp"
+                        android:topRightRadius="@dimen/space_10dp" />
+
+                </shape>
+            <!--</scale>-->
+        <!--</clip>-->
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <scale android:scaleWidth="100%">
+                <shape>
+                    <!--<solid android:color="@color/colorTheme" />-->
+                    <gradient
+                        android:angle="0"
+                        android:centerColor="@color/colorButton"
+                        android:centerY="0"
+                        android:endColor="@color/colorButton"
+                        android:startColor="@color/colorButton" />
+
+                    <corners
+                        android:bottomLeftRadius="@dimen/space_10dp"
+                        android:bottomRightRadius="@dimen/space_10dp"
+                        android:topLeftRadius="@dimen/space_10dp"
+                        android:topRightRadius="@dimen/space_10dp" />
+
+                </shape>
+            </scale>
+        </clip>
+    </item>
+</layer-list>

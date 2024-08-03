@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTheme"
+    android:orientation="vertical"
+    android:padding="@dimen/space_8dp">
+
+    <TextView
+        android:id="@+id/txtWeightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp"
+        android:text="@string/weight"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_20" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp">
+
+        <EditText
+            android:id="@+id/edWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/txtKG"
+            android:hint="KG"
+            android:textColorHint="@color/colorGray"
+            android:textColor="@color/colorWhite"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/txtKG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/txtLB"
+            android:background="@drawable/ract_theme_select"
+            android:padding="@dimen/space_8dp"
+            android:text="KG"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtLB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:background="@drawable/ract_gray"
+            android:textColor="@color/colorBlack"
+            android:padding="@dimen/space_8dp"
+            android:text="LB" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp"
+        android:text="@string/height"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_20" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp">
+
+        <EditText
+            android:id="@+id/edCM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/txtCM"
+            android:hint="0.0"
+            android:textColor="@color/colorWhite"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lnyInch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/txtCM"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edFeet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/main_margin_right"
+                android:layout_weight="1"
+                android:hint="FEET"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGray"
+                android:maxLength="2"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edInch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/main_margin_right"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGray"
+                android:hint="INCH"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/txtIN"
+            android:background="@drawable/ract_gray"
+            android:padding="@dimen/space_8dp"
+            android:text="CM"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txtIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:background="@drawable/ract_theme_select"
+            android:padding="@dimen/space_8dp"
+            android:text="IN"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp">
+
+        <Button
+            android:id="@+id/btnOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin_right"
+            android:layout_toStartOf="@+id/btnNext"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="Next"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+</LinearLayout>

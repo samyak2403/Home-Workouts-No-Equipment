@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTheme"
+    android:orientation="vertical">
+
+    <!-- Header view -->
+    <LinearLayout
+        android:id="@+id/rltHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4dp"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/space_4dp">
+
+            <TextView
+                android:id="@+id/txtWeekDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_2dp"
+                android:text="Date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtTotalWorkoutCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWeekDate"
+                android:padding="@dimen/space_2dp"
+                android:text="0 Workouts"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size_12" />
+
+            <RelativeLayout
+                android:id="@+id/rltTimeKcal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/txtTotalWorkoutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_history_timer"
+                    android:ems="6"
+                    android:padding="@dimen/space_2dp"
+                    android:text="13:00"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size_12"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/txtTotalBurnCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTotalWorkoutTime"
+                    android:drawableStart="@drawable/ic_history_fire"
+                    android:ems="6"
+                    android:padding="@dimen/space_2dp"
+                    android:text="111.1 kcal"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size_12"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0_5dp"
+            android:background="@color/colorGray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyHistoryDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <!-- Content view -->
+    <LinearLayout
+        android:id="@+id/rltContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_8dp"
+        android:paddingEnd="@dimen/space_8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_12dp"
+            android:background="@color/colorTheme"
+            android:paddingBottom="@dimen/space_12dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imgCategory"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorTheme"
+                android:src="@drawable/ract_theme_select" />
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:layout_toEndOf="@+id/imgCategory"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtContentDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_2dp"
+                    android:text="Date Time"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/txtWorkoutName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_2dp"
+                    android:text="Name With day name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtContentTotalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_history_timer"
+                        android:ems="5"
+                        android:padding="@dimen/space_2dp"
+                        android:text="13:00"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/text_size_12"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtContentTotalBurnCalories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/txtContentTotalTime"
+                        android:drawableStart="@drawable/ic_history_fire"
+                        android:ems="6"
+                        android:padding="@dimen/space_2dp"
+                        android:text="111.1 kcal"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/btmContentLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0_5dp"
+            android:layout_marginTop="@dimen/space_0dp"
+            android:background="@color/colorGray" />
+
+    </LinearLayout>
+
+</LinearLayout>

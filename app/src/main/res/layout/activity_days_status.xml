@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:orientation="vertical"
+    tools:context=".activity.DaysStatusActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- Todo Title -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorTheme">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/space_8dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_8dp"
+                android:layout_toEndOf="@+id/imgBack"
+                android:text="@string/_7x4_challenge"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/space_8dp"
+                android:src="@drawable/ic_more"
+                app:tint="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTheme"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/day_status_header_img_h">
+
+                    <ImageView
+                        android:id="@+id/imgHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/full_body" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/space_16dp"
+                        android:layout_marginEnd="@dimen/space_16dp"
+                        android:layout_marginBottom="@dimen/space_8dp">
+
+                        <!-- Day process in text-->
+                        <RelativeLayout
+                            android:id="@+id/rltDayStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtDayLeft"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="28 Days Left"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/txtDayPer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="0%"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_14" />
+
+                        </RelativeLayout>
+
+                        <ProgressBar
+                            android:id="@+id/pbDay"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_8dp"
+                            android:progressBackgroundTint="@color/colorTheme"
+                            android:layout_below="@+id/rltDayStatus"
+                            android:max="100"
+                            android:progressDrawable="@drawable/pb_gray_theme" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/ad_block_day_status"
+                    style="@style/drawer_card"
+                    android:elevation="2dp"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:background="@color/colorTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/fl_native"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </FrameLayout>
+
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcyDaysName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8dp"
+                    android:layout_marginTop="@dimen/space_8dp"
+                    android:layout_marginEnd="@dimen/space_8dp"
+                    android:layout_marginBottom="@dimen/space_8dp"
+                    android:background="@color/colorGray"
+                    android:orientation="vertical"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/llAdView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_50dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@color/colorTheme"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/llAdViewFacebook"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_50dp"-->
+<!--        android:background="@color/colorTheme"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="gone" />-->
+</LinearLayout>

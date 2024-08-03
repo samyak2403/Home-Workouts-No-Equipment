@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0202</color>
+    <color name="colorPrimaryDark">#D10303</color>
+    <color name="colorAccent">#ff0202</color>
+    <color name="colorIconSideBar">#FFFFFF</color>
+    <!-- Toolbar -->
+    <color name="color_toolbar_text">#ffffff</color>
+    <color name="color_toolbar_bg">#1d2228</color>
+
+    <!-- Common colors -->
+
+<!--    <color name="colorTheme">#646D77</color>-->
+    <color name="colorTheme">#1c1b21</color>
+    <color name="colorButton">#04fecd</color>
+    <color name="colorGray">#aeaeae</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteTran">#8BFFFFFF</color>
+    <color name="darkGray">#00ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackTrans">#87000000</color>
+    <color name="colorGrayBg">#A1DAD9D9</color>
+    <color name="colorHistoryImgBg">#464646</color>
+    <color name="colorDrawerBg2">#000000</color>
+    <color name="colorAdBlockBg">#BC020202</color>
+
+    <!-- Drawer -->
+    <color name="color_drawer_text">#000000</color>
+    <color name="color_drawer_bg">#ff0202</color>
+
+    <!-- Level colors  -->
+    <color name="color_beginner">#ff9a02</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="color_intermediate">#359aff</color>
+    <color name="color_advance">#ff3535</color>
+
+    <!-- BMI Chart Background -->
+    <color name="colorFirst">#91CEC0</color>
+    <color name="colorSecond">#154C83</color>
+    <color name="colorThird">#1DC974</color>
+    <color name="colorFour">#CCC504</color>
+    <color name="colorFive">#E09C55</color>
+    <color name="colorSix">#CF2E2E</color>
+
+    <!-- Calender color -->
+    <color name="colorSelectDate">#ff0202</color>
+    <color name="colorCurrentDate">#A8ff0202</color>
+
+    <!-- Dialog full body-->
+    <color name="colorDlFullBodyBtnBg">#7CFFFFFF</color>
+
+    <!--<color name="colorTheme">#6F81FE</color>-->
+    <color name="color1">#0A2141</color>
+    <color name="color2">#6C6BFF</color>
+    <color name="color3">#FF385F</color>
+    <color name="color4">#02D1C1</color>
+    <color name="color5">#02FFAC</color>
+    <color name="color6">#103FC6</color>
+    <color name="color7">#537FF9</color>
+    <color name="color8">#7B3BCC</color>
+    <color name="color9">#299A02</color>
+    <color name="color10">#2F4255</color>
+    <color name="notification_theme">#80DEEA</color>
+
+
+    <color name="exitBgColor">#FDFDFE</color>
+    <color name="exitBtBgColor">#FFFFFF</color>
+    <color name="exitBtTextColor">#72767B</color>
+
+
+</resources>
