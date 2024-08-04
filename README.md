@@ -2,6 +2,10 @@
 
 This project is an Android application designed to provide home workout routines without the need for any equipment. The app uses various libraries and tools to enhance functionality and user experience.
 
+
+Replace `path/to/home_screen.png`, `path/to/workout_categories.png`, and `path/to/workout_details.png` with the actual paths to your screenshots. Replace `path/to/download_image.png` with the path to your download image and `path/to/your_apk.apk` with the actual URL or path to your APK file.
+
+
 ## Features
 
 - Home workout routines without equipment
