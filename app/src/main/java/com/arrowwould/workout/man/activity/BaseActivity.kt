@@ -14,6 +14,22 @@ import android.os.Build
 import android.util.DisplayMetrics
 import android.util.Log
 import android.util.TypedValue
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.view.WindowManager
+import android.widget.AdapterView
+import android.widget.BaseAdapter
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.ListView
+import android.widget.RelativeLayout
+import android.widget.TextView
+
+import com.arrowwould.workout.man.R
+
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -287,10 +303,10 @@ open class BaseActivity : AppCompatActivity(), AdapterView.OnItemClickListener, 
     }
 
     fun confirmationDialog(
-            content: Context,
-            confirmCallBack: ConfirmDialogCallBack,
-            strTitle: String,
-            strMsg: String
+        content: Context,
+        confirmCallBack: ConfirmDialogCallBack,
+        strTitle: String,
+        strMsg: String
     ): Boolean {
 
         val builder1 = AlertDialog.Builder(content)
