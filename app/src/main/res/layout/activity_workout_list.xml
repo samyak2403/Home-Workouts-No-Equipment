@@ -8,7 +8,7 @@
     android:background="@color/colorTheme"
     android:fitsSystemWindows="false"
     android:orientation="vertical"
-    tools:context="com.rbs.workout.freak.activity.WorkoutListActivity">
+    tools:context="com.arrowwould.workout.man.activity.WorkoutListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -16,7 +16,7 @@
 
     <!--<android.support.v4.view.ViewPager-->
     <!-- Exercise animation view with sliding -->
-    <com.rbs.workout.freak.utils.NonSwipeAbleViewPager
+    <com.arrowwould.workout.man.utils.NonSwipeAbleViewPager
         android:id="@+id/viewPagerWorkout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

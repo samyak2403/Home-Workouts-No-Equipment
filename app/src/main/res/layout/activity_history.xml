@@ -97,7 +97,7 @@
                             android:src="@drawable/ic_baseline_arrow_right_24" />
                     </LinearLayout>
 
-                    <com.rbs.workout.freak.compactcalender.CompactCalendarView
+                    <com.arrowwould.workout.man.compactcalender.CompactCalendarView
                         android:id="@+id/CompatCalenderView"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/calender_height"

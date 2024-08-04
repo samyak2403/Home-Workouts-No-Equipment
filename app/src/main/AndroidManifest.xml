@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.rbs.workout.freak">
+    package="com.arrowwould.workout.man">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.rbs.workout.freak.utils.AppControl"
+        android:name="com.arrowwould.workout.man.utils.AppControl"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
@@ -36,7 +36,7 @@
 
         <activity
             android:exported="true"
-            android:name="com.rbs.workout.freak.activity.SplashActivity"
+            android:name="com.arrowwould.workout.man.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme_Splash">
@@ -48,118 +48,118 @@
         </activity>
 
         <activity
-            android:name="com.rbs.workout.freak.activity.GetStartActivity"
+            android:name="com.arrowwould.workout.man.activity.GetStartActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme_Workoutlist"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.HomeActivity"
+            android:name="com.arrowwould.workout.man.activity.HomeActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar2"
             />
         <activity
-            android:name="com.rbs.workout.freak.activity.WorkoutListActivity"
+            android:name="com.arrowwould.workout.man.activity.WorkoutListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Workoutlist"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.WorkoutActivity"
+            android:name="com.arrowwould.workout.man.activity.WorkoutActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBarWhite"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.CompletedActivity"
+            android:name="com.arrowwould.workout.man.activity.CompletedActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.activity.WorkoutListDetailsActivity"
+            android:name="com.arrowwould.workout.man.activity.WorkoutListDetailsActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBarWhite"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.NextPrevDetailsWorkoutActivity"
+            android:name="com.arrowwould.workout.man.activity.NextPrevDetailsWorkoutActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBarWhite"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.HealthDataActivity"
+            android:name="com.arrowwould.workout.man.activity.HealthDataActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.settings.SettingActivity"
+            android:name="com.arrowwould.workout.man.settings.SettingActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.report.ReportActivity"
+            android:name="com.arrowwould.workout.man.report.ReportActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBarReport" />
         <activity
-            android:name="com.rbs.workout.freak.history.HistoryActivity"
+            android:name="com.arrowwould.workout.man.history.HistoryActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.reminder.ReminderActivity"
+            android:name="com.arrowwould.workout.man.reminder.ReminderActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.activity.MetricActivity"
+            android:name="com.arrowwould.workout.man.activity.MetricActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.activity.DaysStatusActivity"
+            android:name="com.arrowwould.workout.man.activity.DaysStatusActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.bw.BuildWiderActivity"
+            android:name="com.arrowwould.workout.man.bw.BuildWiderActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme_Workoutlist"/>
         <activity
-            android:name="com.rbs.workout.freak.bw.BuildWiderWorkoutListActivity"
+            android:name="com.arrowwould.workout.man.bw.BuildWiderWorkoutListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Workoutlist"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.rbs.workout.freak.activity.LibraryActivity"
+            android:name="com.arrowwould.workout.man.activity.LibraryActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeStatusBar" />
         <activity
-            android:name="com.rbs.workout.freak.activity.WeeklyGoalSetActivity"
+            android:name="com.arrowwould.workout.man.activity.WeeklyGoalSetActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppThemeFullScreen" />
 
         <receiver
             android:exported="false"
-            android:name="com.rbs.workout.freak.reminder.MyBroadcastReceiver"
+            android:name="com.arrowwould.workout.man.reminder.MyBroadcastReceiver"
             android:enabled="true" />
 
 
         <receiver
-            android:name="com.rbs.workout.freak.reminderNew.AlarmReceiver"
+            android:name="com.arrowwould.workout.man.reminderNew.AlarmReceiver"
             android:enabled="true"
             android:exported="true"
             tools:ignore="ExportedReceiver" />
         <receiver
             android:exported="false"
-            android:name="com.rbs.workout.freak.reminderNew.BootReceiver">
+            android:name="com.arrowwould.workout.man.reminderNew.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name="com.rbs.workout.freak.pushnotification.MyFirebaseMessagingService"
+            android:name="com.arrowwould.workout.man.pushnotification.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

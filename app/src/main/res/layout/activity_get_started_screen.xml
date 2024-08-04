@@ -6,7 +6,7 @@
     android:id="@+id/llMain"
     android:fitsSystemWindows="false"
     android:background="@color/colorWhite"
-    tools:context="com.rbs.workout.freak.activity.GetStartActivity">
+    tools:context="com.arrowwould.workout.man.activity.GetStartActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgBackImage"
