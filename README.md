@@ -2,9 +2,6 @@
 
 This project is an Android application designed to provide home workout routines without the need for any equipment. The app uses various libraries and tools to enhance functionality and user experience.
 
-
-
-
 ## Features
 
 - Home workout routines without equipment
