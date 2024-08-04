@@ -2,6 +2,7 @@ package com.arrowwould.workout.man.activity
 
 import android.content.Intent
 import android.os.Bundle
+import com.arrowwould.workout.man.R
 import android.view.View
 import android.widget.FrameLayout
 import com.google.android.gms.ads.*

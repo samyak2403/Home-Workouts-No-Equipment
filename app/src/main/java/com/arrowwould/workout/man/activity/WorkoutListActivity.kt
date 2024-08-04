@@ -9,6 +9,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.*
 import com.google.gson.Gson
+import com.arrowwould.workout.man.R
 import com.arrowwould.workout.man.Const
 import com.arrowwould.workout.man.MyInterstitialAds_abc
 import com.arrowwould.workout.man.adapter.WorkoutListAdapter

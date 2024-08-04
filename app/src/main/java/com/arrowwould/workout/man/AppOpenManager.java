@@ -17,7 +17,7 @@ import com.arrowwould.workout.man.activity.SplashActivity;
 
 public class AppOpenManager implements Application.ActivityLifecycleCallbacks {
     private static final String LOG_TAG = "mmmm";
-    private static String AD_UNIT_ID = "ca-app-pub-9893051924658947/6493796243";
+    private static String AD_UNIT_ID = "ca-app-pub-6201944930453956/2299903541";
     private AppOpenAd appOpenAd = null;
     public static boolean isShowingAd = false,adLoaded = false;
 

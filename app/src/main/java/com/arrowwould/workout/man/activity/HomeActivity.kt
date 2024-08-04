@@ -8,6 +8,7 @@ import android.net.ConnectivityManager
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.arrowwould.workout.man.R
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
@@ -31,7 +32,14 @@ import com.arrowwould.workout.man.report.WeekDayReportAdapter
 import com.arrowwould.workout.man.utils.CommonUtility
 import com.arrowwould.workout.man.utils.ConstantString
 import com.arrowwould.workout.man.utils.LocalDB
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.adMobView
+import kotlinx.android.synthetic.main.activity_home.rcyHistoryWeek
+import kotlinx.android.synthetic.main.activity_home.rcyWorkout
+import kotlinx.android.synthetic.main.activity_home.txtTotalKcal
+import kotlinx.android.synthetic.main.activity_home.txtTotalMinutes
+import kotlinx.android.synthetic.main.activity_home.txtTotalWorkouts
+import kotlinx.android.synthetic.main.activity_home.txtWeekStatus
+
 import thehexcoders.google.android.ads.nativetemplates.TemplateView
 import kotlin.math.roundToInt
 
@@ -118,11 +126,11 @@ class HomeActivity : BaseActivity(), View.OnClickListener, CallbackListener {
 
 
         //Fragment use
-        val builder = AdLoader.Builder(this@HomeActivity, "ca-app-pub-4660381108030921/9216228350")
+        val builder = AdLoader.Builder(this@HomeActivity, "ca-app-pub-6201944930453956/9008949999")
         builder.withAdListener(object : AdListener() {
             override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                 super.onAdFailedToLoad(loadAdError)
-               // Toast.makeText(this@HomeActivity, loadAdError.message, Toast.LENGTH_SHORT).show()
+                // Toast.makeText(this@HomeActivity, loadAdError.message, Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -198,15 +206,15 @@ class HomeActivity : BaseActivity(), View.OnClickListener, CallbackListener {
         workoutCategoryDetails.catTableName = ConstantString.tbl_full_body_workouts_list
         arrWorkoutCategoryData.add(workoutCategoryDetails)
 
-/*        workoutCategoryDetails = PWorkOutCategory()
-        workoutCategoryDetails.catDefficultyLevel = ConstantString.Build_wider
-        workoutCategoryDetails.catName = ConstantString.Build_wider
-        workoutCategoryDetails.catSubCategory = ""
-        workoutCategoryDetails.catDetailsBg = 0
-        workoutCategoryDetails.catTypeImage = 0
-        workoutCategoryDetails.catImage = R.drawable.build_wider
-        workoutCategoryDetails.catTableName = ConstantString.tbl_bw_exercise
-        arrWorkoutCategoryData.add(workoutCategoryDetails)*/
+        /*        workoutCategoryDetails = PWorkOutCategory()
+                workoutCategoryDetails.catDefficultyLevel = ConstantString.Build_wider
+                workoutCategoryDetails.catName = ConstantString.Build_wider
+                workoutCategoryDetails.catSubCategory = ""
+                workoutCategoryDetails.catDetailsBg = 0
+                workoutCategoryDetails.catTypeImage = 0
+                workoutCategoryDetails.catImage = R.drawable.build_wider
+                workoutCategoryDetails.catTableName = ConstantString.tbl_bw_exercise
+                arrWorkoutCategoryData.add(workoutCategoryDetails)*/
 
         workoutCategoryDetails = PWorkOutCategory()
         workoutCategoryDetails.catDefficultyLevel = ConstantString.full_body

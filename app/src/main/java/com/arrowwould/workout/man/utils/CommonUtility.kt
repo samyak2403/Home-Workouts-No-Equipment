@@ -201,7 +201,7 @@ object CommonUtility {
             val sendIntentGmail = Intent(Intent.ACTION_SEND)
             sendIntentGmail.type = "plain/text"
             sendIntentGmail.setPackage("com.google.android.gm")
-            sendIntentGmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("studiorbs758@gmail.com"))
+            sendIntentGmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("arrowwould@gmail.com"))
             sendIntentGmail.putExtra(Intent.EXTRA_SUBJECT, content.resources.getString(R.string.app_name) + " - Android")
             content.startActivity(sendIntentGmail)
         }
@@ -214,12 +214,12 @@ object CommonUtility {
     fun rateUs(context: Context) {
         val appPackageName = context.getPackageName()
         try {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.rbs.workout.freak")))
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.arrowwould.workout.man")))
         } catch (anfe: android.content.ActivityNotFoundException) {
             context.startActivity(
                     Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://play.google.com/store/apps/details?id=com.rbs.workout.freak")
+                            Uri.parse("https://play.google.com/store/apps/details?id=com.arrowwould.workout.man")
                     )
             )
         }

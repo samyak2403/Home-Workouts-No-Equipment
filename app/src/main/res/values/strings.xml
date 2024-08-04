@@ -7,7 +7,7 @@
     <string name="demo_time">00:00</string>
     <string name="step_demo_text">1 / 11</string>
 
-    <string name="ad_main_id">ca-app-pub-1478950224950529~2119609456</string>
+    <string name="ad_main_id">ca-app-pub-6201944930453956~1595695535</string>
     <string name="get_started">Get Started</string>
     <string name="ready_to_take_on_the_challenge">Ready to take on the challenge?</string>
 
@@ -136,7 +136,7 @@
     <string name="dl_come_back_in_30_minutes">Come back in 30 minutes</string>
     <string name="btn_continue">Continue</string>
 
-    <string name="privacy_policy_link">https://workoutfreak226.blogspot.com/2023/10/privacy-policy.html</string>
+    <string name="privacy_policy_link">https://doc-hosting.flycricket.io/home-workout-for-men-privacy-policy/7040fa61-1f6c-49ca-a5b9-09d26101bf4a/privacy</string>
 
 
     <string name="update">Update</string>
@@ -147,7 +147,7 @@
     <string name="btn_update">Update</string>
     <string name="exit_confirmation">Are you sure want to exit?</string>
 
-    <string name="contact_us">studiorbs758@gmail.com</string>
+    <string name="contact_us">arrowwould@gmail.com</string>
 
     <string name="btn_do_it_again">Do It Again</string>
     <string name="version">Version 1.13</string>
@@ -156,10 +156,10 @@
 
     // Admob Native Ad
 
-    <string name="native_advanced_ad_keys">ca-app-pub-4660381108030921/9216228350</string>
+    <string name="native_advanced_ad_keys">ca-app-pub-6201944930453956/4155244416</string>
 
 
-    <string name="app_open_ad_id">ca-app-pub-4660381108030921/6781065882</string>
+    <string name="app_open_ad_id">ca-app-pub-6201944930453956/2299903541</string>
 <!--    <string name="app_open_ad_id">ca-app-pub-3940256099942544/3419835294</string>-->
 
 

@@ -11,7 +11,7 @@ class AppSettings {
         val enableFacebookAds = false
 
         //place your one signal id
-        val oneSignalId = "e2fd7919-6087-4589-8938-597bf4c6436d"
+        val oneSignalId = "put your one oneSignalId id here"
 
         //Subscription id's
         val one_month_subscription_id = "put your one month subscription id here"
